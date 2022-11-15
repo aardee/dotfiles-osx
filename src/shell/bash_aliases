@@ -5,6 +5,19 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cd..="cd .."
 
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias _='sudo '
+alias afind='ack -il'
+
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 alias cp="cp -iv"
@@ -30,7 +43,6 @@ alias d="cd ~/Desktop"
 alias e="vim --"
 alias g="git"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ll="ls -l"
 alias m="man"
 alias map="xargs -n1"
 alias n="npm"
@@ -40,6 +52,44 @@ alias q="exit"
 alias t="tmux"
 alias y="yarn"
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ll='ls -lh'
+alias ls='ls -G'
+alias lsa='ls -lah'
+alias md='mkdir -p'
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+alias mvn=mvn-or-mvnw
+alias 'mvn!'='mvn -f $(git rev-parse --show-toplevel 2>/dev/null || echo ".")/pom.xml'
+alias mvn-updates='mvn versions:display-dependency-updates'
+alias mvnag='mvn archetype:generate'
+alias mvnboot='mvn spring-boot:run'
+alias mvnc='mvn clean'
+alias mvncd='mvn clean deploy'
+alias mvnce='mvn clean eclipse:clean eclipse:eclipse'
+alias mvnci='mvn clean install'
+alias mvncie='mvn clean install eclipse:eclipse'
+alias mvncini='mvn clean initialize'
+alias mvncist='mvn clean install -DskipTests'
+alias mvncisto='mvn clean install -DskipTests --offline'
+alias mvncom='mvn compile'
+alias mvncp='mvn clean package'
+alias mvnct='mvn clean test'
+alias mvncv='mvn clean verify'
+alias mvncvst='mvn clean verify -DskipTests'
+alias mvnd='mvn deploy'
+alias mvndocs='mvn dependency:resolve -Dclassifier=javadoc'
+alias mvndt='mvn dependency:tree'
+alias mvne='mvn eclipse:eclipse'
+alias mvnjetty='mvn jetty:run'
+alias mvnp='mvn package'
+alias mvns='mvn site'
+alias mvnsrc='mvn dependency:sources'
+alias mvnt='mvn test'
+alias mvntc='mvn tomcat:run'
+alias mvntc7='mvn tomcat7:run'
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Load OS specific configs.
