@@ -107,3 +107,5 @@ alias spoton="sudo mdutil -a -i on"
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+alias d="cd ~/Desktop"

@@ -4,7 +4,33 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+asdf_install(){
+    declare -r PLUGIN_READABLE_NAME="$1"
+    declare -r PLUGIN="$2"
+    declare -r PLUGIN_URL="$3"
+    declare -r PLUGIN_VERSION="$4"
 
+     # Check if `asdf` is installed.
+    if ! cmd_exists "asdf"; then
+        print_error "$PLUGIN_READABLE_NAME ('asdf' is not installed)"
+        return 1
+    fi
+
+     # Install the specified plugin.
+    execute \
+        "asdf plugin add $PLUGIN $PLUGIN_URL" \
+        "Adding plugin: $PLUGIN_READABLE_NAME"
+
+    execute \
+        "asdf install $PLUGIN $PLUGIN_VERSION" \
+        "Installing plugin: $PLUGIN_READABLE_NAME"    
+
+    execute \
+        "asdf global $PLUGIN $PLUGIN_VERSION" \
+        "Setting global version: $PLUGIN_READABLE_NAME"
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 brew_install() {
 
     declare -r ARGUMENTS="$3"

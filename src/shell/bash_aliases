@@ -39,9 +39,7 @@ alias rm="rm -rf --"
 alias :q="exit"
 alias c="clear"
 alias ch="history -c && > ~/.bash_history"
-alias d="cd ~/Desktop"
 alias e="vim --"
-alias g="git"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias m="man"
 alias map="xargs -n1"
@@ -53,6 +51,7 @@ alias t="tmux"
 alias y="yarn"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# LS
 alias l='ls -lah'
 alias la='ls -lAh'
 alias ll='ls -lh'
@@ -61,6 +60,7 @@ alias lsa='ls -lah'
 alias md='mkdir -p'
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# MAVEN
 alias mvn=mvn-or-mvnw
 alias 'mvn!'='mvn -f $(git rev-parse --show-toplevel 2>/dev/null || echo ".")/pom.xml'
 alias mvn-updates='mvn versions:display-dependency-updates'
@@ -91,7 +91,43 @@ alias mvnt='mvn test'
 alias mvntc='mvn tomcat:run'
 alias mvntc7='mvn tomcat7:run'
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# GIT
+alias g="git"
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# yarn
+alias y=yarn
+alias ya='yarn add'
+alias yad='yarn add --dev'
+alias yap='yarn add --peer'
+alias yb='yarn build'
+alias ycc='yarn cache clean'
+alias yd='yarn dev'
+alias yga='yarn global add'
+alias ygls='yarn global list'
+alias ygrm='yarn global remove'
+alias ygu='yarn global upgrade'
+alias yh='yarn help'
+alias yi='yarn init'
+alias yin='yarn install'
+alias yln='yarn lint'
+alias yls='yarn list'
+alias yout='yarn outdated'
+alias yp='yarn pack'
+alias yrm='yarn remove'
+alias yrun='yarn run'
+alias ys='yarn serve'
+alias yst='yarn start'
+alias yt='yarn test'
+alias ytc='yarn test --coverage'
+alias yuc='yarn global upgrade && yarn cache clean'
+alias yui='yarn upgrade-interactive'
+alias yup='yarn upgrade'
+alias yv='yarn version'
+alias yw='yarn workspace'
+alias yws='yarn workspaces'
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Load OS specific configs.
 
 . "$OS/bash_aliases"

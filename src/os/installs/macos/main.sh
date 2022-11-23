@@ -18,6 +18,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 ./image_tools.sh
 ./misc.sh
 ./misc_tools.sh
+./asdf_tools.sh
 ./../npm.sh
 ./tmux.sh
 ./video_tools.sh

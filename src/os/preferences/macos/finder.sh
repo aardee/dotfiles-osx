@@ -7,6 +7,18 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Finder\n\n"
 
+execute "defaults write com.apple.finder 'QuitMenuItem' -bool 'true'" \
+    "Add quit menu to finder"
+
+execute "defaults write NSGlobalDomain 'AppleShowAllExtensions' -bool 'true'" \
+    "Show all file extensions"
+
+execute "defaults write com.apple.finder 'ShowPathbar' -bool 'true'" \
+    "Show path bar at the bottom"
+
+execute "defaults write com.apple.finder '_FXSortFoldersFirst' -bool 'true'" \
+    "Keep folders on top"
+
 execute "defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true && \
          defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true && \
          defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true" \

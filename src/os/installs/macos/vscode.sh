@@ -15,7 +15,7 @@ install_plugin() {
 print_in_purple "\n   Visual Studio Code\n\n"                                :
 
 # Install VSCode - UNComment when installing from scratch
-#brew_install "Visual Studio Code" "visual-studio-code" "--cask"
+brew_install "Visual Studio Code" "visual-studio-code" "--cask"
 
 printf "\n"
 
@@ -25,7 +25,6 @@ install_plugin "File Icons" "vscode-icons-team.vscode-icons"
 install_plugin "MarkdownLint" "DavidAnson.vscode-markdownlint"
 install_plugin "Vim" "vscodevim.vim"
 install_plugin "GO" "golang.vscode-go"
-
 
 # Close VSCode
 osascript -e 'quit app "Visual Studio Code"'
