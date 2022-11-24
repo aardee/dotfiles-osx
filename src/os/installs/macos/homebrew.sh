@@ -23,11 +23,22 @@ get_homebrew_git_config_file_path() {
 }
 
 install_homebrew() {
-
+    declare -r LOCAL_SHELL_CONFIG_FILE="$HOME/.bash.local"
+    
     if ! cmd_exists "brew"; then
         ask_for_sudo
         printf "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &> /dev/null
         #  └─ simulate the ENTER keypress
+        
+        execute \
+            "printf '# Set PATH, MANPATH, etc., for Homebrew.' >> $LOCAL_SHELL_CONFIG_FILE" \
+            "# Set PATH, MANPATH, etc., for Homebrew."
+            
+            "printf 'eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> $LOCAL_SHELL_CONFIG_FILE" \
+            "# Set PATH for Homebrew."
+            
+            "eval \"$(/opt/homebrew/bin/brew shellenv)\"" \
+            "# Set bash variable"
     fi
 
     print_result $? "Homebrew"
