@@ -9,6 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 install_asdf() {
 
     if ! cmd_exists "asdf"; then
+        ask_for_sudo
         brew_install "asdf" "asdf"
 
         #setup PATH and Bash Completion
