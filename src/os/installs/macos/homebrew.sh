@@ -29,10 +29,6 @@ install_homebrew() {
         ask_for_sudo
         printf "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &> /dev/null
         #  └─ simulate the ENTER keypress
-        
-        execute \
-            "printf '# Set PATH, MANPATH, etc., for Homebrew.' >> $LOCAL_SHELL_CONFIG_FILE" \
-            "# Set PATH, MANPATH, etc., for Homebrew."
        
         execute \
             "printf 'eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> $LOCAL_SHELL_CONFIG_FILE" \
