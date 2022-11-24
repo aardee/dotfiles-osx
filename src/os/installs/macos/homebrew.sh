@@ -33,10 +33,12 @@ install_homebrew() {
         execute \
             "printf '# Set PATH, MANPATH, etc., for Homebrew.' >> $LOCAL_SHELL_CONFIG_FILE" \
             "# Set PATH, MANPATH, etc., for Homebrew."
-            
+       
+        execute \
             "printf 'eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> $LOCAL_SHELL_CONFIG_FILE" \
             "# Set PATH for Homebrew."
             
+        execute \
             "eval \"$(/opt/homebrew/bin/brew shellenv)\"" \
             "# Set bash variable"
     fi
