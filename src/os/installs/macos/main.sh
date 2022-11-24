@@ -8,8 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 ./xcode.sh
 ./homebrew.sh
+,/asdf.sh
 ./bash.sh
-
 ./git.sh
 ./../nvm.sh
 ./browsers.sh
