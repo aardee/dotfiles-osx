@@ -20,3 +20,12 @@ install_asdf() {
     print_result $? "asdf"
 
 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+main() {
+
+    print_in_purple "\n   Homebrew\n\n"
+
+    install_asdf
+}
