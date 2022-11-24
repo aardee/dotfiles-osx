@@ -33,7 +33,7 @@ To set up the dotfiles run the appropriate snippet in the terminal:
 
 | OS | Snippet |
 |:---|:---|
-| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/aardee/dotfiles/main/src/os/setup.sh)"` |
+| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/aardee/dotfiles-osx/main/src/os/setup.sh)"` |
 
 That's it! ✨
 
