@@ -31,12 +31,10 @@ install_homebrew() {
         #  └─ simulate the ENTER keypress
 
         execute \
-            "printf '\n eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> $LOCAL_SHELL_CONFIG_FILE" \
+            "printf '\neval \"$(/opt/homebrew/bin/brew shellenv)\"\n' >> $LOCAL_SHELL_CONFIG_FILE" \
             "# Set PATH and other required environment variables for Homebrew."
 
-        execute \
-            "eval \"$(/opt/homebrew/bin/brew shellenv)\"" \
-            "# Set bash variables"
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
 
     print_result $? "Homebrew"
