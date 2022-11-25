@@ -5,9 +5,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "./utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-chmod 755 ./asdf.sh
-chmod 755 ./asdf_tools.sh
-
 ./xcode.sh
 ./homebrew.sh
 ./asdf.sh
